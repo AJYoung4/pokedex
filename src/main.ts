@@ -1,5 +1,13 @@
+import { startREPL, IOstreams } from "./repl.js";
+
+    const io: IOstreams = {
+        input: process.stdin,
+        output: process.stdout,
+        prompt: "Pokedex operational, awaiting input...",
+    };
+
 function main() {
-    console.log("Hello, world!");
+    startREPL(io);
 }
 
 main();
