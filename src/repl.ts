@@ -48,14 +48,18 @@ export function startREPL() {
         const commandName = words[0];
         const command = commands[commandName];
 
-        if (command) {
-            try {
-                await command.callback(commands);
-            } catch (error) {
-                console.error(`Error running command "${commandName}":`, error);
-            }
-        } else {
-            console.log(`Unknown command`)
+        if(!command) {
+            console.log(
+                `Unknown command: "${commandName}". Type "help" for a list of commands.`,
+            );
+            rl.prompt();
+            return;
+        }
+
+        try {
+            command.callback(commands);
+        } catch (e) {
+            console.log(e);
         }
 
         rl.prompt();
