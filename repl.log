@@ -2,6 +2,8 @@
 > pokedex@1.0.0 dev
 > npx tsc && node dist/main.js
 
-Pokedex operational, awaiting input...Your command was: charmander
-Pokedex operational, awaiting input...Your command was: pikachu
-Pokedex operational, awaiting input...
+Pokedex >> Error fetching locations: fetch failed
+Pokedex >> you're on the first page
+Pokedex >> Error fetching locations: fetch failed
+Pokedex >> Error fetching locations: fetch failed
+Pokedex >> Closing the Pokedex... Goodbye!
